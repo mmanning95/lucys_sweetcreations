@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*w3schools.com/cssref/index.php*/
+
+.sidenav {
+    background-color: palevioletred;
+    height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 110px;
+    justify-items: center;
+  }
+
+  .main-content {
+    margin-left: 220px; /* Offset by the width of the sidebar */
+    padding-top: 50px;
+    width: calc(100% - 220px); /* Take the rest of the space after the sidebar */
+  }
+
