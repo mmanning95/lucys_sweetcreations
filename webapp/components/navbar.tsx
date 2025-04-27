@@ -33,9 +33,9 @@ export default function WebBar() {
 
       {/* Centered Navbar Items */}
       <NavbarContent className="flex-1 flex justify-center gap-4">
-        <NavbarItem className=""> Pricing</NavbarItem>
-        <NavbarItem className=""> Schedule</NavbarItem>
-        <NavbarItem className=""> Contact </NavbarItem>
+        <NavbarItem className=""><p>Pricing</p></NavbarItem>
+        <NavbarItem className=""> <p>Schedule</p></NavbarItem>
+        <NavbarItem className=""> <p>Contact</p> </NavbarItem>
       </NavbarContent>
 
       {/* Right-aligned Navbar Items */}
