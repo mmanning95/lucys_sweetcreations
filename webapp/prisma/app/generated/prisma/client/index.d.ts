@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Item
+ * Model Cake
  * 
  */
-export type Item = $Result.DefaultSelection<Prisma.$ItemPayload>
+export type Cake = $Result.DefaultSelection<Prisma.$CakePayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type Item = $Result.DefaultSelection<Prisma.$ItemPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Items
- * const items = await prisma.item.findMany()
+ * // Fetch zero or more Cakes
+ * const cakes = await prisma.cake.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Items
-   * const items = await prisma.item.findMany()
+   * // Fetch zero or more Cakes
+   * const cakes = await prisma.cake.findMany()
    * ```
    *
    *
@@ -145,14 +145,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.item`: Exposes CRUD operations for the **Item** model.
+   * `prisma.cake`: Exposes CRUD operations for the **Cake** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Items
-    * const items = await prisma.item.findMany()
+    * // Fetch zero or more Cakes
+    * const cakes = await prisma.cake.findMany()
     * ```
     */
-  get item(): Prisma.ItemDelegate<ExtArgs, ClientOptions>;
+  get cake(): Prisma.CakeDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -593,7 +593,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Item: 'Item'
+    Cake: 'Cake'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -612,81 +612,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "item"
+      modelProps: "cake"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Item: {
-        payload: Prisma.$ItemPayload<ExtArgs>
-        fields: Prisma.ItemFieldRefs
+      Cake: {
+        payload: Prisma.$CakePayload<ExtArgs>
+        fields: Prisma.CakeFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.ItemFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload> | null
+            args: Prisma.CakeFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.ItemFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>
+            args: Prisma.CakeFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>
           }
           findFirst: {
-            args: Prisma.ItemFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload> | null
+            args: Prisma.CakeFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.ItemFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>
+            args: Prisma.CakeFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>
           }
           findMany: {
-            args: Prisma.ItemFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>[]
+            args: Prisma.CakeFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>[]
           }
           create: {
-            args: Prisma.ItemCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>
+            args: Prisma.CakeCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>
           }
           createMany: {
-            args: Prisma.ItemCreateManyArgs<ExtArgs>
+            args: Prisma.CakeCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.ItemCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>[]
+            args: Prisma.CakeCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>[]
           }
           delete: {
-            args: Prisma.ItemDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>
+            args: Prisma.CakeDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>
           }
           update: {
-            args: Prisma.ItemUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>
+            args: Prisma.CakeUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>
           }
           deleteMany: {
-            args: Prisma.ItemDeleteManyArgs<ExtArgs>
+            args: Prisma.CakeDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.ItemUpdateManyArgs<ExtArgs>
+            args: Prisma.CakeUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.ItemUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>[]
+            args: Prisma.CakeUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>[]
           }
           upsert: {
-            args: Prisma.ItemUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ItemPayload>
+            args: Prisma.CakeUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CakePayload>
           }
           aggregate: {
-            args: Prisma.ItemAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateItem>
+            args: Prisma.CakeAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCake>
           }
           groupBy: {
-            args: Prisma.ItemGroupByArgs<ExtArgs>
-            result: $Utils.Optional<ItemGroupByOutputType>[]
+            args: Prisma.CakeGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CakeGroupByOutputType>[]
           }
           count: {
-            args: Prisma.ItemCountArgs<ExtArgs>
-            result: $Utils.Optional<ItemCountAggregateOutputType> | number
+            args: Prisma.CakeCountArgs<ExtArgs>
+            result: $Utils.Optional<CakeCountAggregateOutputType> | number
           }
         }
       }
@@ -774,7 +774,7 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    item?: ItemOmit
+    cake?: CakeOmit
   }
 
   /* Types for Logging */
@@ -870,336 +870,394 @@ export namespace Prisma {
    */
 
   /**
-   * Model Item
+   * Model Cake
    */
 
-  export type AggregateItem = {
-    _count: ItemCountAggregateOutputType | null
-    _min: ItemMinAggregateOutputType | null
-    _max: ItemMaxAggregateOutputType | null
+  export type AggregateCake = {
+    _count: CakeCountAggregateOutputType | null
+    _avg: CakeAvgAggregateOutputType | null
+    _sum: CakeSumAggregateOutputType | null
+    _min: CakeMinAggregateOutputType | null
+    _max: CakeMaxAggregateOutputType | null
   }
 
-  export type ItemMinAggregateOutputType = {
+  export type CakeAvgAggregateOutputType = {
+    price: number | null
+  }
+
+  export type CakeSumAggregateOutputType = {
+    price: number | null
+  }
+
+  export type CakeMinAggregateOutputType = {
     id: string | null
     name: string | null
-    createdAt: Date | null
-    updatedAt: Date | null
-    deletedAt: Date | null
+    description: string | null
+    price: number | null
+    imageUrl: string | null
+    category: string | null
+    available: boolean | null
   }
 
-  export type ItemMaxAggregateOutputType = {
+  export type CakeMaxAggregateOutputType = {
     id: string | null
     name: string | null
-    createdAt: Date | null
-    updatedAt: Date | null
-    deletedAt: Date | null
+    description: string | null
+    price: number | null
+    imageUrl: string | null
+    category: string | null
+    available: boolean | null
   }
 
-  export type ItemCountAggregateOutputType = {
+  export type CakeCountAggregateOutputType = {
     id: number
     name: number
-    createdAt: number
-    updatedAt: number
-    deletedAt: number
+    description: number
+    price: number
+    imageUrl: number
+    category: number
+    available: number
     _all: number
   }
 
 
-  export type ItemMinAggregateInputType = {
-    id?: true
-    name?: true
-    createdAt?: true
-    updatedAt?: true
-    deletedAt?: true
+  export type CakeAvgAggregateInputType = {
+    price?: true
   }
 
-  export type ItemMaxAggregateInputType = {
-    id?: true
-    name?: true
-    createdAt?: true
-    updatedAt?: true
-    deletedAt?: true
+  export type CakeSumAggregateInputType = {
+    price?: true
   }
 
-  export type ItemCountAggregateInputType = {
+  export type CakeMinAggregateInputType = {
     id?: true
     name?: true
-    createdAt?: true
-    updatedAt?: true
-    deletedAt?: true
+    description?: true
+    price?: true
+    imageUrl?: true
+    category?: true
+    available?: true
+  }
+
+  export type CakeMaxAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    price?: true
+    imageUrl?: true
+    category?: true
+    available?: true
+  }
+
+  export type CakeCountAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    price?: true
+    imageUrl?: true
+    category?: true
+    available?: true
     _all?: true
   }
 
-  export type ItemAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Item to aggregate.
+     * Filter which Cake to aggregate.
      */
-    where?: ItemWhereInput
+    where?: CakeWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Items to fetch.
+     * Determine the order of Cakes to fetch.
      */
-    orderBy?: ItemOrderByWithRelationInput | ItemOrderByWithRelationInput[]
+    orderBy?: CakeOrderByWithRelationInput | CakeOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: ItemWhereUniqueInput
+    cursor?: CakeWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Items from the position of the cursor.
+     * Take `±n` Cakes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Items.
+     * Skip the first `n` Cakes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Items
+     * Count returned Cakes
     **/
-    _count?: true | ItemCountAggregateInputType
+    _count?: true | CakeCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: CakeAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: CakeSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: ItemMinAggregateInputType
+    _min?: CakeMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: ItemMaxAggregateInputType
+    _max?: CakeMaxAggregateInputType
   }
 
-  export type GetItemAggregateType<T extends ItemAggregateArgs> = {
-        [P in keyof T & keyof AggregateItem]: P extends '_count' | 'count'
+  export type GetCakeAggregateType<T extends CakeAggregateArgs> = {
+        [P in keyof T & keyof AggregateCake]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateItem[P]>
-      : GetScalarType<T[P], AggregateItem[P]>
+        : GetScalarType<T[P], AggregateCake[P]>
+      : GetScalarType<T[P], AggregateCake[P]>
   }
 
 
 
 
-  export type ItemGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ItemWhereInput
-    orderBy?: ItemOrderByWithAggregationInput | ItemOrderByWithAggregationInput[]
-    by: ItemScalarFieldEnum[] | ItemScalarFieldEnum
-    having?: ItemScalarWhereWithAggregatesInput
+  export type CakeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CakeWhereInput
+    orderBy?: CakeOrderByWithAggregationInput | CakeOrderByWithAggregationInput[]
+    by: CakeScalarFieldEnum[] | CakeScalarFieldEnum
+    having?: CakeScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: ItemCountAggregateInputType | true
-    _min?: ItemMinAggregateInputType
-    _max?: ItemMaxAggregateInputType
+    _count?: CakeCountAggregateInputType | true
+    _avg?: CakeAvgAggregateInputType
+    _sum?: CakeSumAggregateInputType
+    _min?: CakeMinAggregateInputType
+    _max?: CakeMaxAggregateInputType
   }
 
-  export type ItemGroupByOutputType = {
+  export type CakeGroupByOutputType = {
     id: string
     name: string
-    createdAt: Date
-    updatedAt: Date
-    deletedAt: Date | null
-    _count: ItemCountAggregateOutputType | null
-    _min: ItemMinAggregateOutputType | null
-    _max: ItemMaxAggregateOutputType | null
+    description: string
+    price: number
+    imageUrl: string
+    category: string | null
+    available: boolean
+    _count: CakeCountAggregateOutputType | null
+    _avg: CakeAvgAggregateOutputType | null
+    _sum: CakeSumAggregateOutputType | null
+    _min: CakeMinAggregateOutputType | null
+    _max: CakeMaxAggregateOutputType | null
   }
 
-  type GetItemGroupByPayload<T extends ItemGroupByArgs> = Prisma.PrismaPromise<
+  type GetCakeGroupByPayload<T extends CakeGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<ItemGroupByOutputType, T['by']> &
+      PickEnumerable<CakeGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof ItemGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof CakeGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], ItemGroupByOutputType[P]>
-            : GetScalarType<T[P], ItemGroupByOutputType[P]>
+              : GetScalarType<T[P], CakeGroupByOutputType[P]>
+            : GetScalarType<T[P], CakeGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type ItemSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CakeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    createdAt?: boolean
-    updatedAt?: boolean
-    deletedAt?: boolean
-  }, ExtArgs["result"]["item"]>
+    description?: boolean
+    price?: boolean
+    imageUrl?: boolean
+    category?: boolean
+    available?: boolean
+  }, ExtArgs["result"]["cake"]>
 
-  export type ItemSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CakeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    createdAt?: boolean
-    updatedAt?: boolean
-    deletedAt?: boolean
-  }, ExtArgs["result"]["item"]>
+    description?: boolean
+    price?: boolean
+    imageUrl?: boolean
+    category?: boolean
+    available?: boolean
+  }, ExtArgs["result"]["cake"]>
 
-  export type ItemSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CakeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    createdAt?: boolean
-    updatedAt?: boolean
-    deletedAt?: boolean
-  }, ExtArgs["result"]["item"]>
+    description?: boolean
+    price?: boolean
+    imageUrl?: boolean
+    category?: boolean
+    available?: boolean
+  }, ExtArgs["result"]["cake"]>
 
-  export type ItemSelectScalar = {
+  export type CakeSelectScalar = {
     id?: boolean
     name?: boolean
-    createdAt?: boolean
-    updatedAt?: boolean
-    deletedAt?: boolean
+    description?: boolean
+    price?: boolean
+    imageUrl?: boolean
+    category?: boolean
+    available?: boolean
   }
 
-  export type ItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "createdAt" | "updatedAt" | "deletedAt", ExtArgs["result"]["item"]>
+  export type CakeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "price" | "imageUrl" | "category" | "available", ExtArgs["result"]["cake"]>
 
-  export type $ItemPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Item"
+  export type $CakePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Cake"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
       name: string
-      createdAt: Date
-      updatedAt: Date
-      deletedAt: Date | null
-    }, ExtArgs["result"]["item"]>
+      description: string
+      price: number
+      imageUrl: string
+      category: string | null
+      available: boolean
+    }, ExtArgs["result"]["cake"]>
     composites: {}
   }
 
-  type ItemGetPayload<S extends boolean | null | undefined | ItemDefaultArgs> = $Result.GetResult<Prisma.$ItemPayload, S>
+  type CakeGetPayload<S extends boolean | null | undefined | CakeDefaultArgs> = $Result.GetResult<Prisma.$CakePayload, S>
 
-  type ItemCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<ItemFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: ItemCountAggregateInputType | true
+  type CakeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CakeFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CakeCountAggregateInputType | true
     }
 
-  export interface ItemDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Item'], meta: { name: 'Item' } }
+  export interface CakeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Cake'], meta: { name: 'Cake' } }
     /**
-     * Find zero or one Item that matches the filter.
-     * @param {ItemFindUniqueArgs} args - Arguments to find a Item
+     * Find zero or one Cake that matches the filter.
+     * @param {CakeFindUniqueArgs} args - Arguments to find a Cake
      * @example
-     * // Get one Item
-     * const item = await prisma.item.findUnique({
+     * // Get one Cake
+     * const cake = await prisma.cake.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends ItemFindUniqueArgs>(args: SelectSubset<T, ItemFindUniqueArgs<ExtArgs>>): Prisma__ItemClient<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends CakeFindUniqueArgs>(args: SelectSubset<T, CakeFindUniqueArgs<ExtArgs>>): Prisma__CakeClient<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Item that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Cake that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {ItemFindUniqueOrThrowArgs} args - Arguments to find a Item
+     * @param {CakeFindUniqueOrThrowArgs} args - Arguments to find a Cake
      * @example
-     * // Get one Item
-     * const item = await prisma.item.findUniqueOrThrow({
+     * // Get one Cake
+     * const cake = await prisma.cake.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends ItemFindUniqueOrThrowArgs>(args: SelectSubset<T, ItemFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ItemClient<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends CakeFindUniqueOrThrowArgs>(args: SelectSubset<T, CakeFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CakeClient<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Item that matches the filter.
+     * Find the first Cake that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ItemFindFirstArgs} args - Arguments to find a Item
+     * @param {CakeFindFirstArgs} args - Arguments to find a Cake
      * @example
-     * // Get one Item
-     * const item = await prisma.item.findFirst({
+     * // Get one Cake
+     * const cake = await prisma.cake.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends ItemFindFirstArgs>(args?: SelectSubset<T, ItemFindFirstArgs<ExtArgs>>): Prisma__ItemClient<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends CakeFindFirstArgs>(args?: SelectSubset<T, CakeFindFirstArgs<ExtArgs>>): Prisma__CakeClient<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Item that matches the filter or
+     * Find the first Cake that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ItemFindFirstOrThrowArgs} args - Arguments to find a Item
+     * @param {CakeFindFirstOrThrowArgs} args - Arguments to find a Cake
      * @example
-     * // Get one Item
-     * const item = await prisma.item.findFirstOrThrow({
+     * // Get one Cake
+     * const cake = await prisma.cake.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends ItemFindFirstOrThrowArgs>(args?: SelectSubset<T, ItemFindFirstOrThrowArgs<ExtArgs>>): Prisma__ItemClient<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends CakeFindFirstOrThrowArgs>(args?: SelectSubset<T, CakeFindFirstOrThrowArgs<ExtArgs>>): Prisma__CakeClient<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Items that matches the filter.
+     * Find zero or more Cakes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ItemFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {CakeFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Items
-     * const items = await prisma.item.findMany()
+     * // Get all Cakes
+     * const cakes = await prisma.cake.findMany()
      * 
-     * // Get first 10 Items
-     * const items = await prisma.item.findMany({ take: 10 })
+     * // Get first 10 Cakes
+     * const cakes = await prisma.cake.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const itemWithIdOnly = await prisma.item.findMany({ select: { id: true } })
+     * const cakeWithIdOnly = await prisma.cake.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends ItemFindManyArgs>(args?: SelectSubset<T, ItemFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends CakeFindManyArgs>(args?: SelectSubset<T, CakeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Item.
-     * @param {ItemCreateArgs} args - Arguments to create a Item.
+     * Create a Cake.
+     * @param {CakeCreateArgs} args - Arguments to create a Cake.
      * @example
-     * // Create one Item
-     * const Item = await prisma.item.create({
+     * // Create one Cake
+     * const Cake = await prisma.cake.create({
      *   data: {
-     *     // ... data to create a Item
+     *     // ... data to create a Cake
      *   }
      * })
      * 
      */
-    create<T extends ItemCreateArgs>(args: SelectSubset<T, ItemCreateArgs<ExtArgs>>): Prisma__ItemClient<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends CakeCreateArgs>(args: SelectSubset<T, CakeCreateArgs<ExtArgs>>): Prisma__CakeClient<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Items.
-     * @param {ItemCreateManyArgs} args - Arguments to create many Items.
+     * Create many Cakes.
+     * @param {CakeCreateManyArgs} args - Arguments to create many Cakes.
      * @example
-     * // Create many Items
-     * const item = await prisma.item.createMany({
+     * // Create many Cakes
+     * const cake = await prisma.cake.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends ItemCreateManyArgs>(args?: SelectSubset<T, ItemCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends CakeCreateManyArgs>(args?: SelectSubset<T, CakeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Items and returns the data saved in the database.
-     * @param {ItemCreateManyAndReturnArgs} args - Arguments to create many Items.
+     * Create many Cakes and returns the data saved in the database.
+     * @param {CakeCreateManyAndReturnArgs} args - Arguments to create many Cakes.
      * @example
-     * // Create many Items
-     * const item = await prisma.item.createManyAndReturn({
+     * // Create many Cakes
+     * const cake = await prisma.cake.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Items and only return the `id`
-     * const itemWithIdOnly = await prisma.item.createManyAndReturn({
+     * // Create many Cakes and only return the `id`
+     * const cakeWithIdOnly = await prisma.cake.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1209,28 +1267,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends ItemCreateManyAndReturnArgs>(args?: SelectSubset<T, ItemCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends CakeCreateManyAndReturnArgs>(args?: SelectSubset<T, CakeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Item.
-     * @param {ItemDeleteArgs} args - Arguments to delete one Item.
+     * Delete a Cake.
+     * @param {CakeDeleteArgs} args - Arguments to delete one Cake.
      * @example
-     * // Delete one Item
-     * const Item = await prisma.item.delete({
+     * // Delete one Cake
+     * const Cake = await prisma.cake.delete({
      *   where: {
-     *     // ... filter to delete one Item
+     *     // ... filter to delete one Cake
      *   }
      * })
      * 
      */
-    delete<T extends ItemDeleteArgs>(args: SelectSubset<T, ItemDeleteArgs<ExtArgs>>): Prisma__ItemClient<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends CakeDeleteArgs>(args: SelectSubset<T, CakeDeleteArgs<ExtArgs>>): Prisma__CakeClient<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Item.
-     * @param {ItemUpdateArgs} args - Arguments to update one Item.
+     * Update one Cake.
+     * @param {CakeUpdateArgs} args - Arguments to update one Cake.
      * @example
-     * // Update one Item
-     * const item = await prisma.item.update({
+     * // Update one Cake
+     * const cake = await prisma.cake.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1240,30 +1298,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends ItemUpdateArgs>(args: SelectSubset<T, ItemUpdateArgs<ExtArgs>>): Prisma__ItemClient<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends CakeUpdateArgs>(args: SelectSubset<T, CakeUpdateArgs<ExtArgs>>): Prisma__CakeClient<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Items.
-     * @param {ItemDeleteManyArgs} args - Arguments to filter Items to delete.
+     * Delete zero or more Cakes.
+     * @param {CakeDeleteManyArgs} args - Arguments to filter Cakes to delete.
      * @example
-     * // Delete a few Items
-     * const { count } = await prisma.item.deleteMany({
+     * // Delete a few Cakes
+     * const { count } = await prisma.cake.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends ItemDeleteManyArgs>(args?: SelectSubset<T, ItemDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends CakeDeleteManyArgs>(args?: SelectSubset<T, CakeDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Items.
+     * Update zero or more Cakes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ItemUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {CakeUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Items
-     * const item = await prisma.item.updateMany({
+     * // Update many Cakes
+     * const cake = await prisma.cake.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1273,14 +1331,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends ItemUpdateManyArgs>(args: SelectSubset<T, ItemUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends CakeUpdateManyArgs>(args: SelectSubset<T, CakeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Items and returns the data updated in the database.
-     * @param {ItemUpdateManyAndReturnArgs} args - Arguments to update many Items.
+     * Update zero or more Cakes and returns the data updated in the database.
+     * @param {CakeUpdateManyAndReturnArgs} args - Arguments to update many Cakes.
      * @example
-     * // Update many Items
-     * const item = await prisma.item.updateManyAndReturn({
+     * // Update many Cakes
+     * const cake = await prisma.cake.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1289,8 +1347,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Items and only return the `id`
-     * const itemWithIdOnly = await prisma.item.updateManyAndReturn({
+     * // Update zero or more Cakes and only return the `id`
+     * const cakeWithIdOnly = await prisma.cake.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1303,56 +1361,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends ItemUpdateManyAndReturnArgs>(args: SelectSubset<T, ItemUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends CakeUpdateManyAndReturnArgs>(args: SelectSubset<T, CakeUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Item.
-     * @param {ItemUpsertArgs} args - Arguments to update or create a Item.
+     * Create or update one Cake.
+     * @param {CakeUpsertArgs} args - Arguments to update or create a Cake.
      * @example
-     * // Update or create a Item
-     * const item = await prisma.item.upsert({
+     * // Update or create a Cake
+     * const cake = await prisma.cake.upsert({
      *   create: {
-     *     // ... data to create a Item
+     *     // ... data to create a Cake
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Item we want to update
+     *     // ... the filter for the Cake we want to update
      *   }
      * })
      */
-    upsert<T extends ItemUpsertArgs>(args: SelectSubset<T, ItemUpsertArgs<ExtArgs>>): Prisma__ItemClient<$Result.GetResult<Prisma.$ItemPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends CakeUpsertArgs>(args: SelectSubset<T, CakeUpsertArgs<ExtArgs>>): Prisma__CakeClient<$Result.GetResult<Prisma.$CakePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Items.
+     * Count the number of Cakes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ItemCountArgs} args - Arguments to filter Items to count.
+     * @param {CakeCountArgs} args - Arguments to filter Cakes to count.
      * @example
-     * // Count the number of Items
-     * const count = await prisma.item.count({
+     * // Count the number of Cakes
+     * const count = await prisma.cake.count({
      *   where: {
-     *     // ... the filter for the Items we want to count
+     *     // ... the filter for the Cakes we want to count
      *   }
      * })
     **/
-    count<T extends ItemCountArgs>(
-      args?: Subset<T, ItemCountArgs>,
+    count<T extends CakeCountArgs>(
+      args?: Subset<T, CakeCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], ItemCountAggregateOutputType>
+          : GetScalarType<T['select'], CakeCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Item.
+     * Allows you to perform aggregations operations on a Cake.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ItemAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {CakeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1372,13 +1430,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends ItemAggregateArgs>(args: Subset<T, ItemAggregateArgs>): Prisma.PrismaPromise<GetItemAggregateType<T>>
+    aggregate<T extends CakeAggregateArgs>(args: Subset<T, CakeAggregateArgs>): Prisma.PrismaPromise<GetCakeAggregateType<T>>
 
     /**
-     * Group by Item.
+     * Group by Cake.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ItemGroupByArgs} args - Group by arguments.
+     * @param {CakeGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1393,14 +1451,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends ItemGroupByArgs,
+      T extends CakeGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: ItemGroupByArgs['orderBy'] }
-        : { orderBy?: ItemGroupByArgs['orderBy'] },
+        ? { orderBy: CakeGroupByArgs['orderBy'] }
+        : { orderBy?: CakeGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1449,20 +1507,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, ItemGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetItemGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, CakeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCakeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Item model
+   * Fields of the Cake model
    */
-  readonly fields: ItemFieldRefs;
+  readonly fields: CakeFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Item.
+   * The delegate class that acts as a "Promise-like" for Cake.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__ItemClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__CakeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1490,377 +1548,379 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Item model
+   * Fields of the Cake model
    */
-  interface ItemFieldRefs {
-    readonly id: FieldRef<"Item", 'String'>
-    readonly name: FieldRef<"Item", 'String'>
-    readonly createdAt: FieldRef<"Item", 'DateTime'>
-    readonly updatedAt: FieldRef<"Item", 'DateTime'>
-    readonly deletedAt: FieldRef<"Item", 'DateTime'>
+  interface CakeFieldRefs {
+    readonly id: FieldRef<"Cake", 'String'>
+    readonly name: FieldRef<"Cake", 'String'>
+    readonly description: FieldRef<"Cake", 'String'>
+    readonly price: FieldRef<"Cake", 'Float'>
+    readonly imageUrl: FieldRef<"Cake", 'String'>
+    readonly category: FieldRef<"Cake", 'String'>
+    readonly available: FieldRef<"Cake", 'Boolean'>
   }
     
 
   // Custom InputTypes
   /**
-   * Item findUnique
+   * Cake findUnique
    */
-  export type ItemFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * Filter, which Item to fetch.
+     * Filter, which Cake to fetch.
      */
-    where: ItemWhereUniqueInput
+    where: CakeWhereUniqueInput
   }
 
   /**
-   * Item findUniqueOrThrow
+   * Cake findUniqueOrThrow
    */
-  export type ItemFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * Filter, which Item to fetch.
+     * Filter, which Cake to fetch.
      */
-    where: ItemWhereUniqueInput
+    where: CakeWhereUniqueInput
   }
 
   /**
-   * Item findFirst
+   * Cake findFirst
    */
-  export type ItemFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * Filter, which Item to fetch.
+     * Filter, which Cake to fetch.
      */
-    where?: ItemWhereInput
+    where?: CakeWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Items to fetch.
+     * Determine the order of Cakes to fetch.
      */
-    orderBy?: ItemOrderByWithRelationInput | ItemOrderByWithRelationInput[]
+    orderBy?: CakeOrderByWithRelationInput | CakeOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Items.
+     * Sets the position for searching for Cakes.
      */
-    cursor?: ItemWhereUniqueInput
+    cursor?: CakeWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Items from the position of the cursor.
+     * Take `±n` Cakes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Items.
+     * Skip the first `n` Cakes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Items.
+     * Filter by unique combinations of Cakes.
      */
-    distinct?: ItemScalarFieldEnum | ItemScalarFieldEnum[]
+    distinct?: CakeScalarFieldEnum | CakeScalarFieldEnum[]
   }
 
   /**
-   * Item findFirstOrThrow
+   * Cake findFirstOrThrow
    */
-  export type ItemFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * Filter, which Item to fetch.
+     * Filter, which Cake to fetch.
      */
-    where?: ItemWhereInput
+    where?: CakeWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Items to fetch.
+     * Determine the order of Cakes to fetch.
      */
-    orderBy?: ItemOrderByWithRelationInput | ItemOrderByWithRelationInput[]
+    orderBy?: CakeOrderByWithRelationInput | CakeOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Items.
+     * Sets the position for searching for Cakes.
      */
-    cursor?: ItemWhereUniqueInput
+    cursor?: CakeWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Items from the position of the cursor.
+     * Take `±n` Cakes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Items.
+     * Skip the first `n` Cakes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Items.
+     * Filter by unique combinations of Cakes.
      */
-    distinct?: ItemScalarFieldEnum | ItemScalarFieldEnum[]
+    distinct?: CakeScalarFieldEnum | CakeScalarFieldEnum[]
   }
 
   /**
-   * Item findMany
+   * Cake findMany
    */
-  export type ItemFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * Filter, which Items to fetch.
+     * Filter, which Cakes to fetch.
      */
-    where?: ItemWhereInput
+    where?: CakeWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Items to fetch.
+     * Determine the order of Cakes to fetch.
      */
-    orderBy?: ItemOrderByWithRelationInput | ItemOrderByWithRelationInput[]
+    orderBy?: CakeOrderByWithRelationInput | CakeOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Items.
+     * Sets the position for listing Cakes.
      */
-    cursor?: ItemWhereUniqueInput
+    cursor?: CakeWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Items from the position of the cursor.
+     * Take `±n` Cakes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Items.
+     * Skip the first `n` Cakes.
      */
     skip?: number
-    distinct?: ItemScalarFieldEnum | ItemScalarFieldEnum[]
+    distinct?: CakeScalarFieldEnum | CakeScalarFieldEnum[]
   }
 
   /**
-   * Item create
+   * Cake create
    */
-  export type ItemCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * The data needed to create a Item.
+     * The data needed to create a Cake.
      */
-    data: XOR<ItemCreateInput, ItemUncheckedCreateInput>
+    data: XOR<CakeCreateInput, CakeUncheckedCreateInput>
   }
 
   /**
-   * Item createMany
+   * Cake createMany
    */
-  export type ItemCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Items.
+     * The data used to create many Cakes.
      */
-    data: ItemCreateManyInput | ItemCreateManyInput[]
+    data: CakeCreateManyInput | CakeCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Item createManyAndReturn
+   * Cake createManyAndReturn
    */
-  export type ItemCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelectCreateManyAndReturn<ExtArgs> | null
+    select?: CakeSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * The data used to create many Items.
+     * The data used to create many Cakes.
      */
-    data: ItemCreateManyInput | ItemCreateManyInput[]
+    data: CakeCreateManyInput | CakeCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Item update
+   * Cake update
    */
-  export type ItemUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * The data needed to update a Item.
+     * The data needed to update a Cake.
      */
-    data: XOR<ItemUpdateInput, ItemUncheckedUpdateInput>
+    data: XOR<CakeUpdateInput, CakeUncheckedUpdateInput>
     /**
-     * Choose, which Item to update.
+     * Choose, which Cake to update.
      */
-    where: ItemWhereUniqueInput
+    where: CakeWhereUniqueInput
   }
 
   /**
-   * Item updateMany
+   * Cake updateMany
    */
-  export type ItemUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Items.
+     * The data used to update Cakes.
      */
-    data: XOR<ItemUpdateManyMutationInput, ItemUncheckedUpdateManyInput>
+    data: XOR<CakeUpdateManyMutationInput, CakeUncheckedUpdateManyInput>
     /**
-     * Filter which Items to update
+     * Filter which Cakes to update
      */
-    where?: ItemWhereInput
+    where?: CakeWhereInput
     /**
-     * Limit how many Items to update.
+     * Limit how many Cakes to update.
      */
     limit?: number
   }
 
   /**
-   * Item updateManyAndReturn
+   * Cake updateManyAndReturn
    */
-  export type ItemUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: CakeSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * The data used to update Items.
+     * The data used to update Cakes.
      */
-    data: XOR<ItemUpdateManyMutationInput, ItemUncheckedUpdateManyInput>
+    data: XOR<CakeUpdateManyMutationInput, CakeUncheckedUpdateManyInput>
     /**
-     * Filter which Items to update
+     * Filter which Cakes to update
      */
-    where?: ItemWhereInput
+    where?: CakeWhereInput
     /**
-     * Limit how many Items to update.
+     * Limit how many Cakes to update.
      */
     limit?: number
   }
 
   /**
-   * Item upsert
+   * Cake upsert
    */
-  export type ItemUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * The filter to search for the Item to update in case it exists.
+     * The filter to search for the Cake to update in case it exists.
      */
-    where: ItemWhereUniqueInput
+    where: CakeWhereUniqueInput
     /**
-     * In case the Item found by the `where` argument doesn't exist, create a new Item with this data.
+     * In case the Cake found by the `where` argument doesn't exist, create a new Cake with this data.
      */
-    create: XOR<ItemCreateInput, ItemUncheckedCreateInput>
+    create: XOR<CakeCreateInput, CakeUncheckedCreateInput>
     /**
-     * In case the Item was found with the provided `where` argument, update it with this data.
+     * In case the Cake was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<ItemUpdateInput, ItemUncheckedUpdateInput>
+    update: XOR<CakeUpdateInput, CakeUncheckedUpdateInput>
   }
 
   /**
-   * Item delete
+   * Cake delete
    */
-  export type ItemDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
     /**
-     * Filter which Item to delete.
+     * Filter which Cake to delete.
      */
-    where: ItemWhereUniqueInput
+    where: CakeWhereUniqueInput
   }
 
   /**
-   * Item deleteMany
+   * Cake deleteMany
    */
-  export type ItemDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Items to delete
+     * Filter which Cakes to delete
      */
-    where?: ItemWhereInput
+    where?: CakeWhereInput
     /**
-     * Limit how many Items to delete.
+     * Limit how many Cakes to delete.
      */
     limit?: number
   }
 
   /**
-   * Item without action
+   * Cake without action
    */
-  export type ItemDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CakeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Item
+     * Select specific fields to fetch from the Cake
      */
-    select?: ItemSelect<ExtArgs> | null
+    select?: CakeSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Item
+     * Omit specific fields from the Cake
      */
-    omit?: ItemOmit<ExtArgs> | null
+    omit?: CakeOmit<ExtArgs> | null
   }
 
 
@@ -1878,15 +1938,17 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const ItemScalarFieldEnum: {
+  export const CakeScalarFieldEnum: {
     id: 'id',
     name: 'name',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt',
-    deletedAt: 'deletedAt'
+    description: 'description',
+    price: 'price',
+    imageUrl: 'imageUrl',
+    category: 'category',
+    available: 'available'
   };
 
-  export type ItemScalarFieldEnum = (typeof ItemScalarFieldEnum)[keyof typeof ItemScalarFieldEnum]
+  export type CakeScalarFieldEnum = (typeof CakeScalarFieldEnum)[keyof typeof CakeScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1933,16 +1995,23 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'DateTime'
+   * Reference to a field of type 'Float'
    */
-  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
+  export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
     
 
 
   /**
-   * Reference to a field of type 'DateTime[]'
+   * Reference to a field of type 'Float[]'
    */
-  export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
+  export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'Boolean'
+   */
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
     
 
 
@@ -1963,112 +2032,138 @@ export namespace Prisma {
    */
 
 
-  export type ItemWhereInput = {
-    AND?: ItemWhereInput | ItemWhereInput[]
-    OR?: ItemWhereInput[]
-    NOT?: ItemWhereInput | ItemWhereInput[]
-    id?: StringFilter<"Item"> | string
-    name?: StringFilter<"Item"> | string
-    createdAt?: DateTimeFilter<"Item"> | Date | string
-    updatedAt?: DateTimeFilter<"Item"> | Date | string
-    deletedAt?: DateTimeNullableFilter<"Item"> | Date | string | null
+  export type CakeWhereInput = {
+    AND?: CakeWhereInput | CakeWhereInput[]
+    OR?: CakeWhereInput[]
+    NOT?: CakeWhereInput | CakeWhereInput[]
+    id?: StringFilter<"Cake"> | string
+    name?: StringFilter<"Cake"> | string
+    description?: StringFilter<"Cake"> | string
+    price?: FloatFilter<"Cake"> | number
+    imageUrl?: StringFilter<"Cake"> | string
+    category?: StringNullableFilter<"Cake"> | string | null
+    available?: BoolFilter<"Cake"> | boolean
   }
 
-  export type ItemOrderByWithRelationInput = {
+  export type CakeOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    deletedAt?: SortOrderInput | SortOrder
+    description?: SortOrder
+    price?: SortOrder
+    imageUrl?: SortOrder
+    category?: SortOrderInput | SortOrder
+    available?: SortOrder
   }
 
-  export type ItemWhereUniqueInput = Prisma.AtLeast<{
+  export type CakeWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: ItemWhereInput | ItemWhereInput[]
-    OR?: ItemWhereInput[]
-    NOT?: ItemWhereInput | ItemWhereInput[]
-    name?: StringFilter<"Item"> | string
-    createdAt?: DateTimeFilter<"Item"> | Date | string
-    updatedAt?: DateTimeFilter<"Item"> | Date | string
-    deletedAt?: DateTimeNullableFilter<"Item"> | Date | string | null
+    AND?: CakeWhereInput | CakeWhereInput[]
+    OR?: CakeWhereInput[]
+    NOT?: CakeWhereInput | CakeWhereInput[]
+    name?: StringFilter<"Cake"> | string
+    description?: StringFilter<"Cake"> | string
+    price?: FloatFilter<"Cake"> | number
+    imageUrl?: StringFilter<"Cake"> | string
+    category?: StringNullableFilter<"Cake"> | string | null
+    available?: BoolFilter<"Cake"> | boolean
   }, "id">
 
-  export type ItemOrderByWithAggregationInput = {
+  export type CakeOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    deletedAt?: SortOrderInput | SortOrder
-    _count?: ItemCountOrderByAggregateInput
-    _max?: ItemMaxOrderByAggregateInput
-    _min?: ItemMinOrderByAggregateInput
+    description?: SortOrder
+    price?: SortOrder
+    imageUrl?: SortOrder
+    category?: SortOrderInput | SortOrder
+    available?: SortOrder
+    _count?: CakeCountOrderByAggregateInput
+    _avg?: CakeAvgOrderByAggregateInput
+    _max?: CakeMaxOrderByAggregateInput
+    _min?: CakeMinOrderByAggregateInput
+    _sum?: CakeSumOrderByAggregateInput
   }
 
-  export type ItemScalarWhereWithAggregatesInput = {
-    AND?: ItemScalarWhereWithAggregatesInput | ItemScalarWhereWithAggregatesInput[]
-    OR?: ItemScalarWhereWithAggregatesInput[]
-    NOT?: ItemScalarWhereWithAggregatesInput | ItemScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Item"> | string
-    name?: StringWithAggregatesFilter<"Item"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Item"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"Item"> | Date | string
-    deletedAt?: DateTimeNullableWithAggregatesFilter<"Item"> | Date | string | null
+  export type CakeScalarWhereWithAggregatesInput = {
+    AND?: CakeScalarWhereWithAggregatesInput | CakeScalarWhereWithAggregatesInput[]
+    OR?: CakeScalarWhereWithAggregatesInput[]
+    NOT?: CakeScalarWhereWithAggregatesInput | CakeScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Cake"> | string
+    name?: StringWithAggregatesFilter<"Cake"> | string
+    description?: StringWithAggregatesFilter<"Cake"> | string
+    price?: FloatWithAggregatesFilter<"Cake"> | number
+    imageUrl?: StringWithAggregatesFilter<"Cake"> | string
+    category?: StringNullableWithAggregatesFilter<"Cake"> | string | null
+    available?: BoolWithAggregatesFilter<"Cake"> | boolean
   }
 
-  export type ItemCreateInput = {
+  export type CakeCreateInput = {
     id?: string
     name: string
-    createdAt?: Date | string
-    updatedAt?: Date | string
-    deletedAt?: Date | string | null
+    description: string
+    price: number
+    imageUrl: string
+    category?: string | null
+    available?: boolean
   }
 
-  export type ItemUncheckedCreateInput = {
+  export type CakeUncheckedCreateInput = {
     id?: string
     name: string
-    createdAt?: Date | string
-    updatedAt?: Date | string
-    deletedAt?: Date | string | null
+    description: string
+    price: number
+    imageUrl: string
+    category?: string | null
+    available?: boolean
   }
 
-  export type ItemUpdateInput = {
+  export type CakeUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    imageUrl?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    available?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type ItemUncheckedUpdateInput = {
+  export type CakeUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    imageUrl?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    available?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type ItemCreateManyInput = {
+  export type CakeCreateManyInput = {
     id?: string
     name: string
-    createdAt?: Date | string
-    updatedAt?: Date | string
-    deletedAt?: Date | string | null
+    description: string
+    price: number
+    imageUrl: string
+    category?: string | null
+    available?: boolean
   }
 
-  export type ItemUpdateManyMutationInput = {
+  export type CakeUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    imageUrl?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    available?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type ItemUncheckedUpdateManyInput = {
+  export type CakeUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    imageUrl?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    available?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -2086,26 +2181,35 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type DateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  export type FloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
-  export type DateTimeNullableFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type BoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
   export type SortOrderInput = {
@@ -2113,28 +2217,42 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type ItemCountOrderByAggregateInput = {
+  export type CakeCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    deletedAt?: SortOrder
+    description?: SortOrder
+    price?: SortOrder
+    imageUrl?: SortOrder
+    category?: SortOrder
+    available?: SortOrder
   }
 
-  export type ItemMaxOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    deletedAt?: SortOrder
+  export type CakeAvgOrderByAggregateInput = {
+    price?: SortOrder
   }
 
-  export type ItemMinOrderByAggregateInput = {
+  export type CakeMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    deletedAt?: SortOrder
+    description?: SortOrder
+    price?: SortOrder
+    imageUrl?: SortOrder
+    category?: SortOrder
+    available?: SortOrder
+  }
+
+  export type CakeMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    price?: SortOrder
+    imageUrl?: SortOrder
+    category?: SortOrder
+    available?: SortOrder
+  }
+
+  export type CakeSumOrderByAggregateInput = {
+    price?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -2155,44 +2273,66 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedDateTimeFilter<$PrismaModel>
-    _max?: NestedDateTimeFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
   }
 
-  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
     _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedDateTimeNullableFilter<$PrismaModel>
-    _max?: NestedDateTimeNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
 
-  export type DateTimeFieldUpdateOperationsInput = {
-    set?: Date | string
+  export type FloatFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
   }
 
-  export type NullableDateTimeFieldUpdateOperationsInput = {
-    set?: Date | string | null
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
+  }
+
+  export type BoolFieldUpdateOperationsInput = {
+    set?: boolean
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -2209,26 +2349,34 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type NestedDateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
-  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
@@ -2259,32 +2407,37 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedDateTimeFilter<$PrismaModel>
-    _max?: NestedDateTimeFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
   }
 
-  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
     _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedDateTimeNullableFilter<$PrismaModel>
-    _max?: NestedDateTimeNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
   export type NestedIntNullableFilter<$PrismaModel = never> = {
@@ -2296,6 +2449,14 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
 

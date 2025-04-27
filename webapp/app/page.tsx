@@ -1,5 +1,6 @@
 'use client';
 import { Avatar, Image, Card, CardHeader, CardBody, } from "@heroui/react";
+import { CldImage } from 'next-cloudinary';
 
 export default function Home() {
   return (
@@ -37,13 +38,17 @@ export default function Home() {
           <h4 className="font-bold text-large">Frontend Radio</h4>
         </CardHeader>
         <CardBody className="overflow-visible py-2">
-          <Image
-            alt="Card background"
-            className="object-cover rounded-xl"
-            src="https://heroui.com/images/hero-card-complete.jpeg"
-            width={270}
+          <CldImage
+            width="500"
+            height="500"
+            src="IMG_20250427_145318_vjtnsw"
+            crop="fill"
+            removeBackground
+            underlay="IMG_20250427_145318_vjtnsw"
+            sizes="100vw"
+            alt="Description of my image"
           />
-        </CardBody>
+      </CardBody>
     </Card>
       </div>
 

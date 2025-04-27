@@ -14,10 +14,12 @@ generator client {
   output   = "app/generated/prisma/client"
 }
 
-model Item {
-  id        String   @id @default(cuid())
-  name      String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  deletedAt DateTime? @map("deleted_at")
+model Cake {
+  id            String   @id @default(cuid())
+  name          String
+  description   String
+  price         Float
+  imageUrl      String
+  category      String?   // "Cakes", "Cupcakes", "Cookies"
+  available     Boolean   @default(true) 
 }
