@@ -22,7 +22,7 @@ export default function WebBar() {
       {/* Left-aligned Navbar Brand */}
       <NavbarBrand className="flex items-center space-x-2">
         <Link className="text-pink-500" href="/">
-          Lucy's Sweet Creations   
+          <p>Lucy's Sweet Creations</p>
         </Link>
         <Image
           alt="Cake Logo"
