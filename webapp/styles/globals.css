@@ -15,9 +15,22 @@
     justify-items: center;
   }
 
+
   .main-content {
     margin-left: 220px; /* Offset by the width of the sidebar */
-    padding-top: 50px;
-    width: calc(100% - 220px); /* Take the rest of the space after the sidebar */
+    padding: 2rem 1rem 2rem 2rem; /* Top, right, bottom, left */
+    width: calc(100% - 200px); /* Take the rest of the space after the sidebar */;
+    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
   }
 

@@ -1,10 +1,45 @@
 'use client';
-import { Avatar, Image, Card, CardHeader, CardBody, } from "@heroui/react";
+
+import { Avatar, Image, Card, CardHeader, CardBody,Divider, } from "@heroui/react";
 import { CldImage } from 'next-cloudinary';
+import { useEffect, useState } from "react";
+
+
+type Cake = {
+  id: string;
+  name: string;
+  description: string;
+  imageUrl: string;
+  category?: string;
+  price: number;
+  available: boolean;
+};
 
 export default function Home() {
+
+  const [cakes, setCakes] = useState<Cake[]>([]);
+  useEffect(() => {
+    async function fetchCakes() {
+      const res = await fetch('/api/cakes', { cache: 'no-store' });
+
+      if (!res.ok) {
+        console.error('Failed to fetch cakes:');
+        return;
+      }
+
+      const data = await res.json();
+      setCakes(data);
+    }
+
+    fetchCakes();
+  }, []);
+
+
+
+
+
   return (
-    <div className="flex flex-col md:flex-row w-full">
+    <div className="flex flex-col md:flex-row w-full bg-pink-100">
       {/* Sidebar */}
       <div className="sidenav">
         <Avatar src="https://heroui.com/images/fruit-1.jpeg" 
@@ -31,27 +66,39 @@ export default function Home() {
 
       {/* Main content */}
       <div className="main-content">
-      <Card className="py-4">
-        <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-          <p className="text-tiny uppercase font-bold">Daily Mix</p>
-          <small className="text-default-500">12 Tracks</small>
-          <h4 className="font-bold text-large">Frontend Radio</h4>
-        </CardHeader>
-        <CardBody className="overflow-visible py-2">
-          <CldImage
-            width="500"
-            height="500"
-            src="IMG_20250427_145318_vjtnsw"
-            crop="fill"
-            removeBackground
-            underlay="IMG_20250427_145318_vjtnsw"
+      {cakes.map((cake) => (
+    <Card key={cake.id} className="p-4 mt-5"
+        shadow="md"
+        radius="lg">
+          
+      <CardHeader className="flex flex-col items-start">
+        <h2 className="text-lg font-bold">{cake.name}</h2>
+        <p className="text-gray-500">{cake.category ?? 'Uncategorized'}</p>
+      </CardHeader>
+      <CardBody>
+        <div className="w-full h-80 relative overflow-hidden rounded">
+         <CldImage
+            fill
+            className="object-cover"
+            src={cake.imageUrl}
             sizes="100vw"
             alt="Description of my image"
           />
+        </div>
+
+        <p className="mt-2">{cake.description}</p>
+        <Divider className="bg-pink-400"/>
+        {/* <div className="bg-pink-100 p-4 rounded-b-lg"> */}
+        <p className="mt-2 font-bold">${cake.price.toFixed(2)}</p>
+        <p className="mt-1 text-sm text-green-600">
+          {cake.available ? 'Available' : 'Sold Out'}
+        </p>
+        {/* </div> */}
       </CardBody>
     </Card>
-      </div>
 
+  ))}
+      </div>
     </div>
   );
 }

@@ -34,19 +34,25 @@ export default function WebBar() {
       {/* Centered Navbar Items */}
       <NavbarContent className="flex-1 flex justify-center gap-4">
         <NavbarItem className=""><p>Pricing</p></NavbarItem>
-        <NavbarItem className=""> <p>Schedule</p></NavbarItem>
-        <NavbarItem className=""> <p>Contact</p> </NavbarItem>
+        <Link>
+        </Link>
+        <Link href="/schedule">
+          <NavbarItem className=""> <p>Schedule</p> </NavbarItem>
+        </Link>
+        <Link href="/contact">
+        <NavbarItem className=""> <p>Contact</p></NavbarItem>
+        </Link>
       </NavbarContent>
 
       {/* Right-aligned Navbar Items */}
       <NavbarContent className="flex items-center gap-3" justify="end">
         <NavbarItem>
-          <Link isExternal aria-label="Facebook" href="https://www.facebook.com">
+          <Link isExternal aria-label="Facebook" href="https://www.facebook.com/lucy.s.sweet.creations.2024">
             <FaFacebook />
           </Link>
           </NavbarItem>
         <NavbarItem>
-          <Link isExternal aria-label="Instagram" href="https://www.instagram.com">
+          <Link isExternal aria-label="Instagram" href="https://www.instagram.com/lucys_sweetcreations?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
             <FaInstagram />
           </Link>
         </NavbarItem>

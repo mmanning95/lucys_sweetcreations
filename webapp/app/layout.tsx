@@ -36,18 +36,17 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-pink-100 font-sans antialiased",
           fontSans.variable,
         )}
       >
         {/* <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}> */}
           <div className="relative flex flex-col h-screen">
             <WebBar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
-            </footer>
+
           </div>
         {/* </Providers> */}
       </body>
