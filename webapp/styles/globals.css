@@ -11,16 +11,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 110px;
     justify-items: center;
   }
 
 
   .main-content {
-    margin-left: 220px; /* Offset by the width of the sidebar */
-    padding: 2rem 1rem 2rem 2rem; /* Top, right, bottom, left */
-    width: calc(100% - 200px); /* Take the rest of the space after the sidebar */;
-    
+    padding: 1rem 1rem 2rem 2rem; /* Top, right, bottom, left */
+
     display: grid;
     grid-template-columns: repeat(1, 1fr); 
     gap: 1.5rem;

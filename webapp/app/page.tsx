@@ -1,5 +1,6 @@
 'use client';
 
+import { Sidebar } from "@/components/sidebar";
 import { Avatar, Image, Card, CardHeader, CardBody,Divider, } from "@heroui/react";
 import { CldImage } from 'next-cloudinary';
 import { useEffect, useState } from "react";
@@ -40,34 +41,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col md:flex-row w-full bg-pink-100">
-      {/* Sidebar */}
-      <div className="sidenav">
-        <Avatar src="https://heroui.com/images/fruit-1.jpeg" 
-        className="w-20 h-20"
-        />
-
-        <div className="break-all p-2">
-          <p>
-          I am ______________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          _____________________________________
-          </p>
-        </div>
-    </div>
-
       {/* Main content */}
-      <div className="main-content">
+      <Sidebar />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-3 w-full">
       {cakes.map((cake) => (
-    <Card key={cake.id} className="p-4 mt-5"
+    <Card key={cake.id} className="p-4 mt-5 w-full"
         shadow="md"
         radius="lg">
           

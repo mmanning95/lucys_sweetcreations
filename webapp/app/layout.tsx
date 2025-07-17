@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import WebBar  from "@/components/navbar";
+import { Sidebar } from "@/components/sidebar";
 
 export const metadata: Metadata = {
   title: {
@@ -41,13 +42,11 @@ export default function RootLayout({
         )}
       >
         {/* <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}> */}
-          <div className="relative flex flex-col h-screen">
-            <WebBar />
-            <main className="">
-              {children}
-            </main>
+<div className="relative flex flex-col min-h-screen">
+  <WebBar />
 
-          </div>
+  <main className="flex-1 p-4">{children}</main>
+</div>
         {/* </Providers> */}
       </body>
     </html>

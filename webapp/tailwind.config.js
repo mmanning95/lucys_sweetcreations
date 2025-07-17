@@ -11,7 +11,7 @@ const config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1D4ED8", // Blue-700
+          DEFAULT: "#64B5F6", // Blue-700
           dark: "#1E40AF",    // Blue-800
           light: "#3B82F6",   // Blue-500
         },
@@ -20,6 +20,7 @@ const config = {
           dark: "#CC3EA4",    // pink-600
           light: "#FF71D7",   // pink-400
         },
+        palevioletred: '#FF4ECD'
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
